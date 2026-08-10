@@ -1,0 +1,56 @@
+# Edit this file when your beat changes. No code changes needed.
+
+beat:
+  keywords:
+    - CDC
+    - outbreak
+    - FDA
+    - HHS
+    - vaccine
+    - vaccines
+    - vaccination
+    - immunization
+    - bird flu
+    - mpox
+    - measles
+
+reddit:
+  subreddits:
+    - healthpolicy
+    - medicine
+    - epidemiology
+    - publichealth
+    - vaccines
+    - nursing
+  # Only include posts from the last N hours
+  lookback_hours: 24
+  # Reddit limits unauthenticated RSS to ~1 request/minute.
+  # Optional: add rss_user + rss_feed from reddit.com/prefs/feeds to skip the wait.
+  # rss_user: your_reddit_username
+  # rss_feed: your_feed_token
+  request_delay_seconds: 62
+
+bluesky:
+  posts_per_keyword: 15
+
+# Substack newsletters publish RSS feeds — add any you follow for expert takes.
+# Use the newsletter homepage (https://name.substack.com) or the feed URL directly.
+substack:
+  lookback_hours: 72
+  # false = include all new posts from listed newsletters
+  # true  = only posts that match beat keywords above
+  filter_by_keywords: false
+  newsletters:
+    - name: Your Local Epidemiologist
+      feed: https://yourlocalepidemiologist.substack.com/feed
+    - name: Insight
+      feed: https://insightnews.substack.com/feed
+    # Add more:
+    # - name: Newsletter display name
+    #   feed: https://theirname.substack.com/feed
+
+email:
+  subject_prefix: "Health Social Digest"
+
+limits:
+  max_items_per_source: 25
